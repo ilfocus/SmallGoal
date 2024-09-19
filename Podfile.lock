@@ -1,0 +1,20 @@
+PODS:
+  - JKSwiftExtension (2.6.5)
+  - SwiftyUserDefaults (5.3.0)
+
+DEPENDENCIES:
+  - JKSwiftExtension
+  - SwiftyUserDefaults
+
+SPEC REPOS:
+  trunk:
+    - JKSwiftExtension
+    - SwiftyUserDefaults
+
+SPEC CHECKSUMS:
+  JKSwiftExtension: 887a9b5e5e8485f4323b7535e510cbbd4fc7eb8e
+  SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
+
+PODFILE CHECKSUM: b463338551216887fbc2010a14d2008a8dbddec1
+
+COCOAPODS: 1.15.2
