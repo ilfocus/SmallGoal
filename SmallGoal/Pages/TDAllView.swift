@@ -20,7 +20,6 @@ struct TDAllView: View {
                 print("click edit")
             })
         }
-        
     }
 }
 

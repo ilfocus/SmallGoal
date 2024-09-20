@@ -13,30 +13,6 @@ enum Tab {
     case set
 }
 
-//struct HomeView: View {
-//    var body: some View {
-//        Text("这是首页")
-//    }
-//}
-
-struct HomeView: View {
-    var body: some View {
-        NavigationView {
-            List {
-                NavigationLink(destination: DetailView()) {
-                    Text("跳转到详情页")
-                }
-            }
-        }
-    }
-}
-
-struct DetailView: View {
-    var body: some View {
-        Text("这是详情页")
-    }
-}
-
 struct SearchView: View {
     var body: some View {
         Text("这是搜索页")

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3B800791BF5A8EC2D15C572C /* Pods_SmallGoal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F85A5614A2AA8F6A4AF6BB /* Pods_SmallGoal.framework */; };
 		95249FC22C9C87660072EF24 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95249FC12C9C87660072EF24 /* MainTabView.swift */; };
+		953FFA212C9DC65000690F42 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953FFA202C9DC65000690F42 /* HomeView.swift */; };
+		953FFA242C9DCA8000690F42 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953FFA232C9DCA8000690F42 /* TaskRow.swift */; };
 		95796E0E2C9C83CD008155FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95796E022C9C83CD008155FF /* Assets.xcassets */; };
 		95796E102C9C83CD008155FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95796E052C9C83CD008155FF /* LaunchScreen.storyboard */; };
 		95796E112C9C83CD008155FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95796E072C9C83CD008155FF /* Main.storyboard */; };
@@ -21,6 +23,7 @@
 		95796E1D2C9C83D8008155FF /* SmallGoalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95796E1A2C9C83D8008155FF /* SmallGoalUITestsLaunchTests.swift */; };
 		9583BFA52C9D02560030D90F /* TDAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9583BFA42C9D02560030D90F /* TDAllView.swift */; };
 		9583BFA92C9D0F910030D90F /* FinishTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9583BFA82C9D0F910030D90F /* FinishTodoView.swift */; };
+		95A760782C9DD33D00E6B482 /* AddFloatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A760772C9DD33D00E6B482 /* AddFloatButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,8 @@
 		3DD2063BFA1152976BEF8B13 /* Pods-SmallGoal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmallGoal.debug.xcconfig"; path = "Target Support Files/Pods-SmallGoal/Pods-SmallGoal.debug.xcconfig"; sourceTree = "<group>"; };
 		83F85A5614A2AA8F6A4AF6BB /* Pods_SmallGoal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmallGoal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95249FC12C9C87660072EF24 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		953FFA202C9DC65000690F42 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		953FFA232C9DCA8000690F42 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		95796DC92C9C83C6008155FF /* SmallGoal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmallGoal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95796DE32C9C83C7008155FF /* SmallGoalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmallGoalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95796DED2C9C83C7008155FF /* SmallGoalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmallGoalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +67,7 @@
 		95796E1A2C9C83D8008155FF /* SmallGoalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallGoalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9583BFA42C9D02560030D90F /* TDAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAllView.swift; sourceTree = "<group>"; };
 		9583BFA82C9D0F910030D90F /* FinishTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishTodoView.swift; sourceTree = "<group>"; };
+		95A760772C9DD33D00E6B482 /* AddFloatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFloatButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,15 @@
 				83F85A5614A2AA8F6A4AF6BB /* Pods_SmallGoal.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		953FFA222C9DCA6700690F42 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				953FFA232C9DCA8000690F42 /* TaskRow.swift */,
+				95A760772C9DD33D00E6B482 /* AddFloatButton.swift */,
+			);
+			path = Tasks;
 			sourceTree = "<group>";
 		};
 		95796DC02C9C83C6008155FF = {
@@ -175,8 +190,10 @@
 		9583BFA32C9D01FF0030D90F /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				953FFA222C9DCA6700690F42 /* Tasks */,
 				9583BFA42C9D02560030D90F /* TDAllView.swift */,
 				9583BFA82C9D0F910030D90F /* FinishTodoView.swift */,
+				953FFA202C9DC65000690F42 /* HomeView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -360,7 +377,10 @@
 				95796E122C9C83CD008155FF /* AppDelegate.swift in Sources */,
 				95796E132C9C83CD008155FF /* SceneDelegate.swift in Sources */,
 				9583BFA92C9D0F910030D90F /* FinishTodoView.swift in Sources */,
+				95A760782C9DD33D00E6B482 /* AddFloatButton.swift in Sources */,
 				95796E142C9C83CD008155FF /* SmallGoal.xcdatamodeld in Sources */,
+				953FFA212C9DC65000690F42 /* HomeView.swift in Sources */,
+				953FFA242C9DCA8000690F42 /* TaskRow.swift in Sources */,
 				95249FC22C9C87660072EF24 /* MainTabView.swift in Sources */,
 				95796E152C9C83CD008155FF /* ViewController.swift in Sources */,
 			);
