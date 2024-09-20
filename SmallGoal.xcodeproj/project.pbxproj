@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B800791BF5A8EC2D15C572C /* Pods_SmallGoal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F85A5614A2AA8F6A4AF6BB /* Pods_SmallGoal.framework */; };
-		95249FC22C9C87660072EF24 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95249FC12C9C87660072EF24 /* MainView.swift */; };
+		95249FC22C9C87660072EF24 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95249FC12C9C87660072EF24 /* MainTabView.swift */; };
 		95796E0E2C9C83CD008155FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95796E022C9C83CD008155FF /* Assets.xcassets */; };
 		95796E102C9C83CD008155FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95796E052C9C83CD008155FF /* LaunchScreen.storyboard */; };
 		95796E112C9C83CD008155FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95796E072C9C83CD008155FF /* Main.storyboard */; };
@@ -19,6 +19,8 @@
 		95796E182C9C83D4008155FF /* SmallGoalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95796E162C9C83D4008155FF /* SmallGoalTests.swift */; };
 		95796E1C2C9C83D8008155FF /* SmallGoalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95796E192C9C83D8008155FF /* SmallGoalUITests.swift */; };
 		95796E1D2C9C83D8008155FF /* SmallGoalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95796E1A2C9C83D8008155FF /* SmallGoalUITestsLaunchTests.swift */; };
+		9583BFA52C9D02560030D90F /* TDAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9583BFA42C9D02560030D90F /* TDAllView.swift */; };
+		9583BFA92C9D0F910030D90F /* FinishTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9583BFA82C9D0F910030D90F /* FinishTodoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +44,7 @@
 		1460434EDFDFBB8D7EC5C6D8 /* Pods-SmallGoal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmallGoal.release.xcconfig"; path = "Target Support Files/Pods-SmallGoal/Pods-SmallGoal.release.xcconfig"; sourceTree = "<group>"; };
 		3DD2063BFA1152976BEF8B13 /* Pods-SmallGoal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmallGoal.debug.xcconfig"; path = "Target Support Files/Pods-SmallGoal/Pods-SmallGoal.debug.xcconfig"; sourceTree = "<group>"; };
 		83F85A5614A2AA8F6A4AF6BB /* Pods_SmallGoal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmallGoal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		95249FC12C9C87660072EF24 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		95249FC12C9C87660072EF24 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		95796DC92C9C83C6008155FF /* SmallGoal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmallGoal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95796DE32C9C83C7008155FF /* SmallGoalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmallGoalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95796DED2C9C83C7008155FF /* SmallGoalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmallGoalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +60,8 @@
 		95796E162C9C83D4008155FF /* SmallGoalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallGoalTests.swift; sourceTree = "<group>"; };
 		95796E192C9C83D8008155FF /* SmallGoalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallGoalUITests.swift; sourceTree = "<group>"; };
 		95796E1A2C9C83D8008155FF /* SmallGoalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallGoalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9583BFA42C9D02560030D90F /* TDAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAllView.swift; sourceTree = "<group>"; };
+		9583BFA82C9D0F910030D90F /* FinishTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishTodoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 		95796E0C2C9C83CD008155FF /* SmallGoal */ = {
 			isa = PBXGroup;
 			children = (
+				9583BFA32C9D01FF0030D90F /* Pages */,
+				9583BFA22C9D01ED0030D90F /* TabView */,
 				95796E012C9C83CD008155FF /* AppDelegate.swift */,
 				95796E022C9C83CD008155FF /* Assets.xcassets */,
 				95796E032C9C83CD008155FF /* Info.plist */,
@@ -137,7 +143,6 @@
 				95796E092C9C83CD008155FF /* SmallGoal.entitlements */,
 				95796E0A2C9C83CD008155FF /* SmallGoal.xcdatamodeld */,
 				95796E0B2C9C83CD008155FF /* ViewController.swift */,
-				95249FC12C9C87660072EF24 /* MainView.swift */,
 			);
 			path = SmallGoal;
 			sourceTree = "<group>";
@@ -157,6 +162,23 @@
 				95796E1A2C9C83D8008155FF /* SmallGoalUITestsLaunchTests.swift */,
 			);
 			path = SmallGoalUITests;
+			sourceTree = "<group>";
+		};
+		9583BFA22C9D01ED0030D90F /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				95249FC12C9C87660072EF24 /* MainTabView.swift */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		9583BFA32C9D01FF0030D90F /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				9583BFA42C9D02560030D90F /* TDAllView.swift */,
+				9583BFA82C9D0F910030D90F /* FinishTodoView.swift */,
+			);
+			path = Pages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,10 +356,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9583BFA52C9D02560030D90F /* TDAllView.swift in Sources */,
 				95796E122C9C83CD008155FF /* AppDelegate.swift in Sources */,
 				95796E132C9C83CD008155FF /* SceneDelegate.swift in Sources */,
+				9583BFA92C9D0F910030D90F /* FinishTodoView.swift in Sources */,
 				95796E142C9C83CD008155FF /* SmallGoal.xcdatamodeld in Sources */,
-				95249FC22C9C87660072EF24 /* MainView.swift in Sources */,
+				95249FC22C9C87660072EF24 /* MainTabView.swift in Sources */,
 				95796E152C9C83CD008155FF /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
