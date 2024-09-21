@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TaskRow: View {
-    @State var isSelect: Bool = false
+    @State var isSelect: Bool = true
     @State var opacity: Double = 0.0
     
     private let onTapCompleted: () -> Void
@@ -21,28 +21,29 @@ struct TaskRow: View {
     var body: some View {
         VStack {
             HStack(spacing: 16.0) {
+                Image(systemName: isSelect ? "checkmark.square" : "square")
+                    .foregroundColor(Color.gray)
+                    .imageScale(.large)
+                    .onTapGesture {
+                        self.isSelect.toggle()
+                    }
                 VStack(alignment: .leading, spacing: 4.0) {
                     Text("目标")
-                        .font(.headline)
+                        .strikethrough(isSelect, color:.gray)
+                        .foregroundColor(isSelect ? Color.gray : Color.black)
+                        .font(.subheadline)
                         .lineLimit(1)
                     Text("内容详细说明")
+                        .strikethrough(isSelect, color: .gray)
+                        .foregroundColor(Color.gray)
                         .font(.footnote)
                         .lineLimit(3)
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 .layoutPriority(1)
-                
                 Spacer()
-                
-                Image(systemName: isSelect ? "checkmark.circle.fill" : "circle")
-                    .imageScale(.large)
-                    .onTapGesture {
-                        self.isSelect.toggle()
-                    }
             }
         }
-        .padding()
-        .background(Color.green)
         .cornerRadius(16.0)
         .padding([.horizontal], 16.0)
         .padding([.bottom], 8.0)
@@ -51,6 +52,22 @@ struct TaskRow: View {
             withAnimation {
                 self.opacity = 1.0
             }
+        }
+    }
+}
+
+struct StrikethroughText: View {
+    var text: String
+
+    var body: some View {
+        HStack {
+            Text(text)
+            Spacer()
+            Path { path in
+                path.move(to: CGPoint(x: 0, y: 10))
+                path.addLine(to: CGPoint(x: UIScreen.main.bounds.width, y: 10))
+            }
+           .stroke(Color.gray, lineWidth: 2)
         }
     }
 }

@@ -32,15 +32,15 @@ struct MainTabView: View {
         TabView(selection: $selection) {
             HomeView()
                .tabItem {
-                    Image(systemName: "house")
-                    Text("首页")
+                    Image(systemName: "target")
+                    Text("目标")
                 }
                .tag(Tab.home)
             
             TDAllView()
                 .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("搜索")
+                    Image(systemName: "list.dash")
+                    Text("列表")
                 }
                 .tag(Tab.all)
 
@@ -48,8 +48,8 @@ struct MainTabView: View {
                 ProfileView()
             }
            .tabItem {
-                Image(systemName: "person")
-                Text("个人资料")
+                Image(systemName: "gear")
+                Text("设置")
             }
            .tag(Tab.set)
         }

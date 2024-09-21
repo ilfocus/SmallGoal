@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B800791BF5A8EC2D15C572C /* Pods_SmallGoal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F85A5614A2AA8F6A4AF6BB /* Pods_SmallGoal.framework */; };
+		952316272C9E6C1D00066705 /* AddToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952316262C9E6C1D00066705 /* AddToDo.swift */; };
 		95249FC22C9C87660072EF24 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95249FC12C9C87660072EF24 /* MainTabView.swift */; };
 		953FFA212C9DC65000690F42 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953FFA202C9DC65000690F42 /* HomeView.swift */; };
 		953FFA242C9DCA8000690F42 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953FFA232C9DCA8000690F42 /* TaskRow.swift */; };
@@ -47,6 +48,7 @@
 		1460434EDFDFBB8D7EC5C6D8 /* Pods-SmallGoal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmallGoal.release.xcconfig"; path = "Target Support Files/Pods-SmallGoal/Pods-SmallGoal.release.xcconfig"; sourceTree = "<group>"; };
 		3DD2063BFA1152976BEF8B13 /* Pods-SmallGoal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmallGoal.debug.xcconfig"; path = "Target Support Files/Pods-SmallGoal/Pods-SmallGoal.debug.xcconfig"; sourceTree = "<group>"; };
 		83F85A5614A2AA8F6A4AF6BB /* Pods_SmallGoal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmallGoal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		952316262C9E6C1D00066705 /* AddToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDo.swift; sourceTree = "<group>"; };
 		95249FC12C9C87660072EF24 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		953FFA202C9DC65000690F42 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		953FFA232C9DCA8000690F42 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				9583BFA42C9D02560030D90F /* TDAllView.swift */,
 				9583BFA82C9D0F910030D90F /* FinishTodoView.swift */,
 				953FFA202C9DC65000690F42 /* HomeView.swift */,
+				952316262C9E6C1D00066705 /* AddToDo.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				95A760782C9DD33D00E6B482 /* AddFloatButton.swift in Sources */,
 				95796E142C9C83CD008155FF /* SmallGoal.xcdatamodeld in Sources */,
 				953FFA212C9DC65000690F42 /* HomeView.swift in Sources */,
+				952316272C9E6C1D00066705 /* AddToDo.swift in Sources */,
 				953FFA242C9DCA8000690F42 /* TaskRow.swift in Sources */,
 				95249FC22C9C87660072EF24 /* MainTabView.swift in Sources */,
 				95796E152C9C83CD008155FF /* ViewController.swift in Sources */,

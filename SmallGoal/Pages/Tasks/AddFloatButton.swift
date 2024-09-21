@@ -24,7 +24,7 @@ struct AddFloatButton: View {
                         .frame(width: 44, height: 44)
                         .background(Color.white)
                         .clipShape(Circle())
-                        .shadow(color: .primary, radius: 4.0)
+                        .shadow(color: .gray, radius: 2.0)
                 }
                 .offset(x: -32, y: -16)
             }
