@@ -22,6 +22,7 @@
 		95796E182C9C83D4008155FF /* SmallGoalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95796E162C9C83D4008155FF /* SmallGoalTests.swift */; };
 		95796E1C2C9C83D8008155FF /* SmallGoalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95796E192C9C83D8008155FF /* SmallGoalUITests.swift */; };
 		95796E1D2C9C83D8008155FF /* SmallGoalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95796E1A2C9C83D8008155FF /* SmallGoalUITestsLaunchTests.swift */; };
+		957E0BC52C9EC7E5009AFEDD /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 957E0BC42C9EC7E5009AFEDD /* SwiftUIX */; };
 		9583BFA52C9D02560030D90F /* TDAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9583BFA42C9D02560030D90F /* TDAllView.swift */; };
 		9583BFA92C9D0F910030D90F /* FinishTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9583BFA82C9D0F910030D90F /* FinishTodoView.swift */; };
 		95A760782C9DD33D00E6B482 /* AddFloatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A760772C9DD33D00E6B482 /* AddFloatButton.swift */; };
@@ -78,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B800791BF5A8EC2D15C572C /* Pods_SmallGoal.framework in Frameworks */,
+				957E0BC52C9EC7E5009AFEDD /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +183,32 @@
 			path = SmallGoalUITests;
 			sourceTree = "<group>";
 		};
+		957E0BC62C9EC822009AFEDD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				953FFA202C9DC65000690F42 /* HomeView.swift */,
+				952316262C9E6C1D00066705 /* AddToDo.swift */,
+				953FFA222C9DCA6700690F42 /* Tasks */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		957E0BC72C9EC83C009AFEDD /* List */ = {
+			isa = PBXGroup;
+			children = (
+				9583BFA42C9D02560030D90F /* TDAllView.swift */,
+				9583BFA82C9D0F910030D90F /* FinishTodoView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		957E0BC82C9EC847009AFEDD /* Set */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
 		9583BFA22C9D01ED0030D90F /* TabView */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,11 +220,9 @@
 		9583BFA32C9D01FF0030D90F /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				953FFA222C9DCA6700690F42 /* Tasks */,
-				9583BFA42C9D02560030D90F /* TDAllView.swift */,
-				9583BFA82C9D0F910030D90F /* FinishTodoView.swift */,
-				953FFA202C9DC65000690F42 /* HomeView.swift */,
-				952316262C9E6C1D00066705 /* AddToDo.swift */,
+				957E0BC82C9EC847009AFEDD /* Set */,
+				957E0BC72C9EC83C009AFEDD /* List */,
+				957E0BC62C9EC822009AFEDD /* Home */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -291,6 +317,9 @@
 				Base,
 			);
 			mainGroup = 95796DC02C9C83C6008155FF;
+			packageReferences = (
+				957E0BC32C9EC7E4009AFEDD /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = 95796DCA2C9C83C6008155FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -735,6 +764,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		957E0BC32C9EC7E4009AFEDD /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		957E0BC42C9EC7E5009AFEDD /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 957E0BC32C9EC7E4009AFEDD /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		95796E0A2C9C83CD008155FF /* SmallGoal.xcdatamodeld */ = {
