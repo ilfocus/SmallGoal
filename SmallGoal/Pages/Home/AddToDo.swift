@@ -10,13 +10,15 @@ import SwiftUI
 struct AddToDo: View {
     @State private var name: String = ""
     @State private var notes: String = ""
-    @State private var priority: Int = 4
+    
+    @State private var priority: PriorityType = .none
+    
     @State private var isDeadlineOn: Bool = false
     @State private var date = Date()
+    
     @State private var isImportant: Bool = true
     @State private var listName: String = "Inbox"
     @State private var tag: String = "内务"
-    @State private var isTimeSet: Bool = false
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -95,6 +97,16 @@ struct AddToDo: View {
                 Text("取消")
             })
         }
+    }
+}
+
+// MARK: click fuction
+extension AddToDo {
+    func addToListClick() {
+        let model = ToDoModel(title: name,
+                              detail: notes,
+                              priority: priority)
+        
     }
 }
 

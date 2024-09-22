@@ -12,6 +12,7 @@
 		95249FC22C9C87660072EF24 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95249FC12C9C87660072EF24 /* MainTabView.swift */; };
 		953FFA212C9DC65000690F42 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953FFA202C9DC65000690F42 /* HomeView.swift */; };
 		953FFA242C9DCA8000690F42 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953FFA232C9DCA8000690F42 /* TaskRow.swift */; };
+		954FC4502CA0536D001E7D24 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954FC44F2CA0536D001E7D24 /* ToDoModel.swift */; };
 		95796E0E2C9C83CD008155FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95796E022C9C83CD008155FF /* Assets.xcassets */; };
 		95796E102C9C83CD008155FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95796E052C9C83CD008155FF /* LaunchScreen.storyboard */; };
 		95796E112C9C83CD008155FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95796E072C9C83CD008155FF /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		95249FC12C9C87660072EF24 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		953FFA202C9DC65000690F42 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		953FFA232C9DCA8000690F42 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
+		954FC44F2CA0536D001E7D24 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
 		95796DC92C9C83C6008155FF /* SmallGoal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmallGoal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95796DE32C9C83C7008155FF /* SmallGoalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmallGoalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95796DED2C9C83C7008155FF /* SmallGoalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmallGoalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,37 @@
 			path = Tasks;
 			sourceTree = "<group>";
 		};
+		954FC44C2CA04EBD001E7D24 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				954FC4512CA05D60001E7D24 /* DB */,
+				954FC44D2CA04F01001E7D24 /* UserDefault */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		954FC44D2CA04F01001E7D24 /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserDefault;
+			sourceTree = "<group>";
+		};
+		954FC44E2CA05342001E7D24 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				954FC44F2CA0536D001E7D24 /* ToDoModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		954FC4512CA05D60001E7D24 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
 		95796DC02C9C83C6008155FF = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +184,7 @@
 		95796E0C2C9C83CD008155FF /* SmallGoal */ = {
 			isa = PBXGroup;
 			children = (
+				954FC44C2CA04EBD001E7D24 /* Storage */,
 				9583BFA32C9D01FF0030D90F /* Pages */,
 				9583BFA22C9D01ED0030D90F /* TabView */,
 				95796E012C9C83CD008155FF /* AppDelegate.swift */,
@@ -186,6 +220,7 @@
 		957E0BC62C9EC822009AFEDD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				954FC44E2CA05342001E7D24 /* ViewModel */,
 				953FFA202C9DC65000690F42 /* HomeView.swift */,
 				952316262C9E6C1D00066705 /* AddToDo.swift */,
 				953FFA222C9DCA6700690F42 /* Tasks */,
@@ -410,6 +445,7 @@
 				95796E132C9C83CD008155FF /* SceneDelegate.swift in Sources */,
 				9583BFA92C9D0F910030D90F /* FinishTodoView.swift in Sources */,
 				95A760782C9DD33D00E6B482 /* AddFloatButton.swift in Sources */,
+				954FC4502CA0536D001E7D24 /* ToDoModel.swift in Sources */,
 				95796E142C9C83CD008155FF /* SmallGoal.xcdatamodeld in Sources */,
 				953FFA212C9DC65000690F42 /* HomeView.swift in Sources */,
 				952316272C9E6C1D00066705 /* AddToDo.swift in Sources */,
