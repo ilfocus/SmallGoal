@@ -87,6 +87,7 @@ struct AddToDo: View {
             }
             .navigationBarTitle("添加目标", displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {
+                addToListClick()
                 presentationMode.wrappedValue.dismiss()
             }) {
                 Text("添加")
@@ -103,9 +104,14 @@ struct AddToDo: View {
 // MARK: click fuction
 extension AddToDo {
     func addToListClick() {
-        let model = ToDoModel(title: name,
-                              detail: notes,
-                              priority: priority)
+        ToDoDBManager.shared.addToDo(title: name,
+                                     detail: notes,
+                                     taskState: .plan,
+                                     priority: .high,
+                                     date: "2024-09-23",
+                                     time: "23:45",
+                                     tag: "我的任务",
+                                     list: "工作")
         
     }
 }

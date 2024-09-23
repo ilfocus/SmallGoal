@@ -58,6 +58,11 @@ struct HomeView: View {
                         }
                         
                         AddFloatButton {
+                            // 查询并打印所有 ToDo 数据
+                            let allToDos = ToDoDBManager.shared.fetchAllToDos()
+                            for todo in allToDos {
+                                print("Title: \(todo.title ?? ""), Detail: \(todo.detail ?? ""), Date: \(todo.date ?? "")")
+                            }
                             self.showAddToDo = true
                         }
                     }
