@@ -31,6 +31,7 @@
 		95AF57AE2CA1C2E700F4AAC8 /* ToDoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AF57AD2CA1C2D200F4AAC8 /* ToDoType.swift */; };
 		95AF58082CA3069D00F4AAC8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AF58072CA3069D00F4AAC8 /* Persistence.swift */; };
 		95AF580A2CA3080E00F4AAC8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AF58092CA3080E00F4AAC8 /* ContentView.swift */; };
+		95AF580E2CA3132A00F4AAC8 /* DynamicHeightTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AF580D2CA3132A00F4AAC8 /* DynamicHeightTextEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		95AF57AD2CA1C2D200F4AAC8 /* ToDoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoType.swift; sourceTree = "<group>"; };
 		95AF58072CA3069D00F4AAC8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		95AF58092CA3080E00F4AAC8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		95AF580D2CA3132A00F4AAC8 /* DynamicHeightTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightTextEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 		95796E0C2C9C83CD008155FF /* SmallGoal */ = {
 			isa = PBXGroup;
 			children = (
+				95AF580C2CA3130C00F4AAC8 /* TestView */,
 				954FC44C2CA04EBD001E7D24 /* Storage */,
 				9583BFA32C9D01FF0030D90F /* Pages */,
 				9583BFA22C9D01ED0030D90F /* TabView */,
@@ -207,7 +210,6 @@
 				95796E092C9C83CD008155FF /* SmallGoal.entitlements */,
 				95796E0A2C9C83CD008155FF /* SmallGoal.xcdatamodeld */,
 				95796E0B2C9C83CD008155FF /* ViewController.swift */,
-				95AF58092CA3080E00F4AAC8 /* ContentView.swift */,
 			);
 			path = SmallGoal;
 			sourceTree = "<group>";
@@ -234,7 +236,6 @@
 			children = (
 				954FC44E2CA05342001E7D24 /* ViewModel */,
 				953FFA202C9DC65000690F42 /* HomeView.swift */,
-				952316262C9E6C1D00066705 /* AddToDo.swift */,
 				953FFA222C9DCA6700690F42 /* Tasks */,
 			);
 			path = Home;
@@ -267,11 +268,29 @@
 		9583BFA32C9D01FF0030D90F /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				95AF580B2CA30F0B00F4AAC8 /* AddTodo */,
 				957E0BC82C9EC847009AFEDD /* Set */,
 				957E0BC72C9EC83C009AFEDD /* List */,
 				957E0BC62C9EC822009AFEDD /* Home */,
 			);
 			path = Pages;
+			sourceTree = "<group>";
+		};
+		95AF580B2CA30F0B00F4AAC8 /* AddTodo */ = {
+			isa = PBXGroup;
+			children = (
+				952316262C9E6C1D00066705 /* AddToDo.swift */,
+			);
+			path = AddTodo;
+			sourceTree = "<group>";
+		};
+		95AF580C2CA3130C00F4AAC8 /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				95AF58092CA3080E00F4AAC8 /* ContentView.swift */,
+				95AF580D2CA3132A00F4AAC8 /* DynamicHeightTextEditor.swift */,
+			);
+			path = TestView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,6 +487,7 @@
 				95AF57662CA1B66B00F4AAC8 /* HomeViewUD.swift in Sources */,
 				95249FC22C9C87660072EF24 /* MainTabView.swift in Sources */,
 				95796E152C9C83CD008155FF /* ViewController.swift in Sources */,
+				95AF580E2CA3132A00F4AAC8 /* DynamicHeightTextEditor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

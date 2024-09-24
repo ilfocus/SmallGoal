@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct AddToDo: View {
+    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) private var viewContext
+    
     @State private var name: String = ""
     @State private var notes: String = ""
     
-    @State private var priority: PriorityType = .none
+//    @State private var priority: PriorityType = .none
+    @State private var priority: Int = 0
     
     @State private var isDeadlineOn: Bool = false
     @State private var date = Date()
@@ -19,9 +23,6 @@ struct AddToDo: View {
     @State private var isImportant: Bool = true
     @State private var listName: String = "Inbox"
     @State private var tag: String = "内务"
-    
-    @Environment(\.presentationMode) var presentationMode
-    @Environment(\.managedObjectContext) private var viewContext
     
     var body: some View {
         NavigationView {
