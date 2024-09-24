@@ -10,11 +10,13 @@ import SwiftUI
 struct TaskRow: View {
     @State var isSelect: Bool = true
     @State var opacity: Double = 0.0
+    @State var title: String = ""
     
     private let onTapCompleted: () -> Void
     
-    init(isSelect: Bool, onTapCompleted: @escaping () -> Void) {
+    init(isSelect: Bool, title: String, onTapCompleted: @escaping () -> Void) {
         self.isSelect = isSelect
+        self.title = title
         self.onTapCompleted = onTapCompleted
     }
     
@@ -28,7 +30,7 @@ struct TaskRow: View {
                         self.isSelect.toggle()
                     }
                 VStack(alignment: .leading, spacing: 4.0) {
-                    Text("目标")
+                    Text("目标 - \(title)")
                         .strikethrough(isSelect, color:.gray)
                         .foregroundColor(isSelect ? Color.gray : Color.black)
                         .font(.subheadline)
@@ -73,5 +75,5 @@ struct StrikethroughText: View {
 }
 
 #Preview {
-    TaskRow(isSelect: false) {}
+    TaskRow(isSelect: false, title: "") {}
 }

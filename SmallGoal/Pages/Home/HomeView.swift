@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct HomeView: View {
     @State private var hideCompletedTasks: Bool = true
     @State private var showAddToDo: Bool = false
+    
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \TodoModel.title, ascending: true)],
+        animation: .default)
+    private var todos: FetchedResults<TodoModel>
     
     var body: some View {
         NavigationView {
@@ -33,8 +39,8 @@ struct HomeView: View {
                                     .padding([.horizontal], 16)
                                     .foregroundColor(Color.gray)
                                 Divider()
-                                ForEach(0..<3) { index in
-                                    TaskRow(isSelect: false) {
+                                ForEach(todos) { todo in
+                                    TaskRow(isSelect: false, title: todo.title ?? "") {
                                         
                                     }
                                 }
@@ -47,7 +53,7 @@ struct HomeView: View {
                                         .foregroundColor(Color.gray)
                                     Divider()
                                     ForEach(0..<3) { index in
-                                        TaskRow(isSelect: true) {
+                                        TaskRow(isSelect: true, title: "已完成") {
                                             
                                         }
                                     }
@@ -58,11 +64,6 @@ struct HomeView: View {
                         }
                         
                         AddFloatButton {
-                            // 查询并打印所有 ToDo 数据
-                            let allToDos = ToDoDBManager.shared.fetchAllToDos()
-                            for todo in allToDos {
-                                print("Title: \(todo.title ?? ""), Detail: \(todo.detail ?? ""), Date: \(todo.date ?? "")")
-                            }
                             self.showAddToDo = true
                         }
                     }

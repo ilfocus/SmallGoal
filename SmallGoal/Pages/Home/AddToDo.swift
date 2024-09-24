@@ -21,6 +21,7 @@ struct AddToDo: View {
     @State private var tag: String = "内务"
     
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) private var viewContext
     
     var body: some View {
         NavigationView {
@@ -104,15 +105,30 @@ struct AddToDo: View {
 // MARK: click fuction
 extension AddToDo {
     func addToListClick() {
-        ToDoDBManager.shared.addToDo(title: name,
-                                     detail: notes,
-                                     taskState: .plan,
-                                     priority: .high,
-                                     date: "2024-09-23",
-                                     time: "23:45",
-                                     tag: "我的任务",
-                                     list: "工作")
+//        ToDoDBManager.shared.addToDo(title: name,
+//                                     detail: notes,
+//                                     taskState: .plan,
+//                                     priority: .high,
+//                                     date: "2024-09-23",
+//                                     time: "23:45",
+//                                     tag: "我的任务",
+//                                     list: "工作")
+        let model = TodoModel(context: viewContext)
+        model.title = name
+        model.detail = notes
+        model.taskState = Int16(TaskState.plan.rawValue)
+        model.priority = Int16(PriorityType.high.rawValue)
+        model.date = "2024-09-23"
+        model.time = "23:45"
+        model.tag = "我的任务"
+        model.list = "我的工作"
         
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
     }
 }
 
