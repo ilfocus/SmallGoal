@@ -24,15 +24,41 @@ struct AddToDo: View {
     @State private var listName: String = "Inbox"
     @State private var tag: String = "内务"
     
+    let placeholder: String = "请输入描述..."
+    let textWidth = UIScreen.main.bounds.width - 60
+    @State private var textEditorHeight: CGFloat = 16 // 初始高度，单行高度
+    
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("")) {
                     TextField("目标是什么?", text: $name)
                         .font(Font.system(size: 15))
+//                        .frame(width: textWidth)
                     TextField("描述", text: $notes)
                         .font(Font.system(size: 12))
                         .foregroundColor(Color.gray)
+//                    ZStack(alignment: .topLeading) {
+//                        if notes.isEmpty {
+//                            VStack {
+//                                Spacer().frame(height: 2.0)
+//                                Text(placeholder)
+//                                   .foregroundColor(.gray.opacity(0.6))
+//                                   .font(Font.system(size: 12.0))
+//                                   .padding(.horizontal, 3)
+//                                Spacer().frame(height: 2.0)
+//                            }
+//                        }
+//                        
+//                        TextEditor(text: $notes)
+//                            .frame(width: textWidth, height: textEditorHeight)
+//                            .opacity(notes.isEmpty ? 0.5 : 1)
+//                            .font(Font.system(size: 12.0))
+//                            .foregroundColor(Color.gray)
+//                            .onChange(of: notes) { _ in
+//                                updateHeightForTextEditor()
+//                            }
+//                    }
                 }
                 
                 Section(header: Text("详细信息")) {
@@ -131,6 +157,19 @@ extension AddToDo {
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
+    
+//    private func updateHeightForTextEditor() {
+//        // 使用隐藏的 Text 来计算内容高度
+//        let textHeight = notes.boundingRect(
+//            with: CGSize(width: textWidth, height: .greatestFiniteMagnitude),
+//            options: .usesLineFragmentOrigin,
+//            attributes: [.font: UIFont.systemFont(ofSize: 12)],
+//            context: nil
+//        ).height
+//
+//        // 给 textEditorHeight 加上一些额外的 padding 以适应多行
+//        textEditorHeight = max(16, textHeight + 18)
+//    }
 }
 
 #Preview {
